@@ -6,15 +6,15 @@ export default function Footer() {
   return (
     <footer className="bg-gray-900 text-white py-12">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid md:grid-cols-3 gap-8 mb-8 justify-items-center">
-          <div>
+        <div className="flex items-center justify-between gap-8 mb-8">
+          <div className="flex-1">
             <h3 className="text-xl font-bold mb-4">Govardhan Annabathula</h3>
             <p className="text-gray-400 leading-relaxed">
               Data Analyst & Full-Stack Developer transforming data into actionable insights
             </p>
           </div>
 
-          <div>
+          <div className="flex flex-col items-end">
             <h4 className="font-semibold mb-4">Connect</h4>
             <div className="flex gap-4">
               <a
