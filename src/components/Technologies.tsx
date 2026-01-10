@@ -1,34 +1,43 @@
-import { Database, Code, Wrench, Globe, BarChart3, Terminal } from 'lucide-react';
+import { Database, Code, Wrench, Globe } from 'lucide-react';
 
 export default function Technologies() {
-  const skills = [
-    { name: 'Python', icon: '🐍', category: 'Programming' },
-    { name: 'JavaScript', icon: '⚡', category: 'Programming' },
-    { name: 'Java', icon: '☕', category: 'Programming' },
-    { name: 'SQL', icon: '🗄️', category: 'Database' },
-    { name: 'R', icon: '📊', category: 'Analytics' },
-    { name: 'React', icon: '⚛️', category: 'Frontend' },
-    { name: 'Next.js', icon: '▲', category: 'Frontend' },
-    { name: 'Node.js', icon: '🟢', category: 'Backend' },
-    { name: 'HTML5', icon: '🌐', category: 'Frontend' },
-    { name: 'CSS3', icon: '🎨', category: 'Frontend' },
-    { name: 'Tailwind CSS', icon: '💨', category: 'Frontend' },
-    { name: 'MongoDB', icon: '🍃', category: 'Database' },
-    { name: 'MySQL', icon: '🐬', category: 'Database' },
-    { name: 'PostgreSQL', icon: '🐘', category: 'Database' },
-    { name: 'Supabase', icon: '🔥', category: 'Database' },
-    { name: 'Pandas', icon: '🐼', category: 'Analytics' },
-    { name: 'Tableau', icon: '📈', category: 'Analytics' },
-    { name: 'Excel', icon: '📑', category: 'Analytics' },
-    { name: 'RStudio', icon: '📋', category: 'Analytics' },
-    { name: 'Git', icon: '🔀', category: 'Tools' },
-    { name: 'Postman', icon: '🐭', category: 'Tools' },
-    { name: 'RESTful APIs', icon: '🔗', category: 'Tools' },
-    { name: 'Stripe', icon: '💳', category: 'Tools' },
-    { name: 'JWT', icon: '🔐', category: 'Tools' },
+  const categories = [
+    {
+      title: 'Data Analytics',
+      icon: Database,
+      color: 'bg-blue-50 border-blue-200',
+      iconColor: 'text-blue-600',
+      skills: ['Python', 'SQL', 'R', 'Pandas', 'Tableau', 'Excel', 'Statistical Analysis', 'Data Visualization', 'RStudio'],
+    },
+    {
+      title: 'Programming Languages',
+      icon: Code,
+      color: 'bg-purple-50 border-purple-200',
+      iconColor: 'text-purple-600',
+      skills: ['Python', 'JavaScript', 'Java', 'SQL', 'R'],
+    },
+    {
+      title: 'Web Development',
+      icon: Globe,
+      color: 'bg-pink-50 border-pink-200',
+      iconColor: 'text-pink-600',
+      skills: ['React.js', 'Next.js', 'Node.js', 'HTML5', 'CSS3', 'Tailwind CSS'],
+    },
+    {
+      title: 'Databases',
+      icon: Database,
+      color: 'bg-green-50 border-green-200',
+      iconColor: 'text-green-600',
+      skills: ['MongoDB', 'MySQL', 'PostgreSQL', 'Supabase'],
+    },
+    {
+      title: 'Tools & Technologies',
+      icon: Wrench,
+      color: 'bg-amber-50 border-amber-200',
+      iconColor: 'text-amber-600',
+      skills: ['Git', 'Postman', 'RESTful APIs', 'Stripe', 'JWT'],
+    },
   ];
-
-  const categories = ['Programming', 'Frontend', 'Backend', 'Database', 'Analytics', 'Tools'];
 
   return (
     <section id="technologies" className="py-20 bg-white">
@@ -39,21 +48,31 @@ export default function Technologies() {
           <div className="w-20 h-1 bg-teal-600 mx-auto mt-4"></div>
         </div>
 
-        <div className="flex flex-wrap justify-center gap-3">
-          {skills.map((skill, index) => (
-            <div
-              key={index}
-              className="group relative bg-white border-2 border-gray-200 rounded-lg px-4 py-3 hover:border-teal-600 hover:shadow-lg transition-all cursor-default"
-            >
-              <div className="flex items-center gap-2">
-                <span className="text-2xl">{skill.icon}</span>
-                <span className="text-sm font-medium text-gray-900">{skill.name}</span>
+        <div className="grid md:grid-cols-2 gap-6">
+          {categories.map((category, index) => {
+            const Icon = category.icon;
+            return (
+              <div
+                key={index}
+                className={`${category.color} border-2 rounded-xl p-6 hover:shadow-lg transition-shadow`}
+              >
+                <div className="flex items-center gap-3 mb-4">
+                  <Icon className={`${category.iconColor}`} size={24} />
+                  <h3 className="text-xl font-bold text-gray-900">{category.title}</h3>
+                </div>
+                <div className="flex flex-wrap gap-2">
+                  {category.skills.map((skill, skillIndex) => (
+                    <span
+                      key={skillIndex}
+                      className="bg-white px-3 py-1.5 rounded-lg text-sm text-gray-700 border border-gray-200"
+                    >
+                      {skill}
+                    </span>
+                  ))}
+                </div>
               </div>
-              <div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 hidden group-hover:block bg-gray-900 text-white text-xs px-2 py-1 rounded whitespace-nowrap z-10">
-                {skill.category}
-              </div>
-            </div>
-          ))}
+            );
+          })}
         </div>
       </div>
     </section>
