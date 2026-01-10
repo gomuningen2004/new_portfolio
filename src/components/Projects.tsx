@@ -3,19 +3,20 @@ import { ExternalLink, Github } from 'lucide-react';
 export default function Projects() {
   const dataProjects = [
     {
-  title: 'Family Shop Sales – Exploratory Data Analysis',
-  year: '2025',
-  description:
-    'Performed exploratory data analysis on real-world sales data from a family-run retail shop to understand revenue drivers, seasonality, and demand variability, translating raw transactions into actionable business insights.',
-  highlights: [
-    'Cleaned and standardized daily sales data, handling missing values and removing non-operational days',
-    'Analyzed revenue trends across months and weekdays to uncover seasonal and temporal patterns',
-    'Identified core revenue-driving items and distinguished stable products from highly volatile, low-demand items',
-  ],
-  tags: ['Python', 'Pandas', 'EDA', 'Data Analysis'],
-  github: 'https://github.com/gomuningen2004/shop_sales',
-  color: 'border-green-200 hover:border-green-400',
-},{
+      title: 'Family Shop Sales – Exploratory Data Analysis',
+      year: '2025',
+      description:
+        'Performed exploratory data analysis on real-world sales data from a family-run retail shop to understand revenue drivers, seasonality, and demand variability, translating raw transactions into actionable business insights.',
+      highlights: [
+        'Cleaned and standardized daily sales data, handling missing values and removing non-operational days',
+        'Analyzed revenue trends across months and weekdays to uncover seasonal and temporal patterns',
+        'Identified core revenue-driving items and distinguished stable products from highly volatile, low-demand items',
+      ],
+      tags: ['Python', 'Pandas', 'EDA', 'Data Analysis'],
+      github: 'https://github.com/gomuningen2004/shop_sales',
+      color: 'border-green-200 hover:border-green-400',
+    },
+    {
       title: 'Superstore Sales & Profitability Analysis',
       year: '2025',
       description:
@@ -45,7 +46,7 @@ export default function Projects() {
     },
   ];
 
-  const fullStackProjects = [
+  const webProjects = [
     {
       title: 'Natours – Full-Stack Tour Booking Platform',
       year: '2025',
@@ -89,31 +90,31 @@ export default function Projects() {
       color: 'border-pink-200 hover:border-pink-400',
     },
     {
-      title: 'AI Mood Journal – Full-Stack Application',
+      title: 'Cocktail Mayhem',
       year: '2025',
       description:
-        'Intelligent mood tracking application that analyzes emotions and provides personalized insights using AI integration.',
+        'Interactive cocktail discovery application with advanced filtering and detailed recipe information.',
       highlights: [
-        'Built journal entry system with mood tracking and sentiment analysis',
-        'Integrated AI capabilities to analyze emotional patterns and provide recommendations',
-        'Implemented secure authentication and data persistence with database integration',
+        'Integrated with cocktail API for comprehensive drink database',
+        'Built responsive search and filter functionality',
+        'Implemented user-friendly UI with detailed recipe cards and ingredients',
       ],
-      tags: ['React', 'Node.js', 'MongoDB', 'AI/ML', 'Authentication'],
-      github: 'https://github.com/gomuningen2004/AI-Mood-Journal',
-      color: 'border-indigo-200 hover:border-indigo-400',
+      tags: ['JavaScript', 'REST API', 'HTML5', 'CSS3'],
+      github: 'https://github.com/gomuningen2004/Cocktail-Mayhem',
+      color: 'border-orange-200 hover:border-orange-400',
     },
     {
-      title: 'Django Blog Application',
+      title: 'Blog Application',
       year: '2025',
       description:
-        'Full-featured blogging platform built with Django backend and comprehensive content management system.',
+        'Full-featured blogging platform built with modern web technologies and comprehensive content management system.',
       highlights: [
         'Implemented user authentication and authorization systems',
         'Created post creation, editing, and deletion functionality with rich text editor',
         'Built comment system and user engagement features',
       ],
-      tags: ['Django', 'Python', 'SQLite', 'Bootstrap', 'REST API'],
-      github: 'https://github.com/gomuningen2004/Django-blog-app',
+      tags: ['React', 'Node.js', 'MongoDB', 'REST API'],
+      github: 'https://github.com/gomuningen2004/Blog-application',
       color: 'border-yellow-200 hover:border-yellow-400',
     },
   ];
@@ -142,10 +143,10 @@ export default function Projects() {
         <div>
           <div className="flex items-center gap-3 mb-8">
             <div className="w-2 h-8 bg-purple-600 rounded"></div>
-            <h3 className="text-2xl font-bold text-gray-900">Full-Stack Development Projects</h3>
+            <h3 className="text-2xl font-bold text-gray-900">Web Development Projects</h3>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {fullStackProjects.map((project, index) => (
+            {webProjects.map((project, index) => (
               <ProjectCard key={index} project={project} />
             ))}
           </div>

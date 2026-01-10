@@ -20,6 +20,9 @@ function App() {
               <a href="#about" className="text-gray-700 hover:text-teal-600 transition-colors">
                 About
               </a>
+              <a href="#education" className="text-gray-700 hover:text-teal-600 transition-colors">
+                Education
+              </a>
               <a href="#technologies" className="text-gray-700 hover:text-teal-600 transition-colors">
                 Technologies
               </a>
