@@ -54,12 +54,6 @@ export default function Hero() {
           >
             <Mail size={24} />
           </a>
-          <a
-            href="tel:+916301865430"
-            className="hover:text-teal-600 transition-colors"
-          >
-            <Phone size={24} />
-          </a>
         </div>
       </div>
     </section>
