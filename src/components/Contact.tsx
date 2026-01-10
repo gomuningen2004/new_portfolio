@@ -31,21 +31,6 @@ export default function Contact() {
 
             <div className="flex items-start gap-4">
               <div className="bg-teal-100 p-3 rounded-lg">
-                <Phone className="text-teal-600" size={24} />
-              </div>
-              <div>
-                <h4 className="font-semibold text-gray-900 mb-1">Phone</h4>
-                <a
-                  href="tel:+916301865430"
-                  className="text-gray-600 hover:text-teal-600 transition-colors"
-                >
-                  +91-6301865430
-                </a>
-              </div>
-            </div>
-
-            <div className="flex items-start gap-4">
-              <div className="bg-teal-100 p-3 rounded-lg">
                 <MapPin className="text-teal-600" size={24} />
               </div>
               <div>
